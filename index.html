@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;500&display=swap" rel="stylesheet"> 
+    <title>Fotos de Gatitos</title>
+</head>
+<body>
+    <header class="header">
+        <img class="header__img" src="./img/kitty_black.png" alt="gatito">
+        <h1 class="header__h1">API De Gatitos</h1>
+    </header>
+    <section class="section">
+        <div class="section__containerRandom">
+            <div class="section__containerRandom--cont">
+                <div class="section__containerRandom--title">
+                    <img class="section__containerRandom--patita" src="./img/patita.png" alt="patita">
+                    <h2 class="gatitos">Gatos Aleatorios</h2>
+                    <span id="error"></span>
+                    <button class="section__container--btn" id="btn">Cambiar de imagen</button>
+                </div>
+    
+                <div class="section__containerForm" id="uploading">
+                    <img class="section__containerRandom--patita" src="./img/patita.png" alt="patita">
+                    <h2 class="gatitos">Sube la foto de tu gato</h2>
+            
+                    <!-- la action es una url donde vamos a enviar la informacion de 
+                    nuestro formulario, por medio de enviar todos los valores en la url
+                    como queryParameter -->
+            
+                    <!-- el name es para que el form-data pueda saber cúal es el valor "value"
+                    que estamos guardando, no lo guarde en forma de array sino en objeto
+                    valor, entonces por eso se necesita el nombre(name) para ese archivo
+                    que vayamos a subir -->
+            
+                    <form id="uploading__form" class="section__containerForm--form">
+                        <label for="file">
+                            <img src="./img/guardar.png" alt="">
+                        </label>
+                        <p>Elegir archivo</p>
+                        <input type="file" id="file" name="file">
+                        <button class="section__container--btn" type="button" onclick="uploadGato()">Subir foto</button>
+                    </form>
+                </div>
+                
+                <article class="section__article">
+                    <img class="section__container--img" id="img1" alt="">
+                    <button class="section__container--fav" id="btn_save1">
+                        Guardar imagen en favoritos
+                        <img src="./img/heart.png" alt="corazon">
+                    </button>
+                </article>
+    
+                <article class="section__article">
+                    <img class="section__container--img" id="img2" alt="">
+                    <button class="section__container--fav" id="btn_save2">
+                        Guardar imagen en favoritos
+                        <img src="./img/heart.png" alt="corazon">
+                    </button>
+                </article>
+            </div>
+
+            
+        </div>
+
+        <div class="section__favorites">
+            
+        </div>
+    </section>
+    
+</body>
+<script src="./index.js"></script>
+</html>
